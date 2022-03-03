@@ -13,5 +13,7 @@ namespace EntityLayer.Concrete
         public int GeneralAudienceID { get; set; }
         public string GeneralAudienceImageUrl { get; set; }
         public bool GeneralAudienceStatus { get; set; }
+        public int MovieID { get; set; }
+        public Movie Movie { get; set; }
     }
 }

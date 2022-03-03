@@ -18,5 +18,7 @@ namespace EntityLayer.Concrete
         public string MovieDirector { get; set; }
         public string YoutubeEmbed { get; set; }
         public sbyte MovieStatus { get; set; }
+        public List<GeneralAudience> GeneralAudiences { get; set; }
+        public List<MovieTheater> MovieTheater { get; set; }
     }
 }
