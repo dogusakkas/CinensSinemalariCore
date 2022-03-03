@@ -8,5 +8,9 @@ namespace CinensSinemalariCore.Controllers
         {
             return View();
         }
+        public PartialViewResult OwlCarouselPartial()
+        {
+            return PartialView();
+        }
     }
 }

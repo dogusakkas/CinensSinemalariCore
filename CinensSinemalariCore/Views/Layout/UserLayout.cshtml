@@ -1,0 +1,178 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/CinensSinemalari/assets/css/header.css">
+    <link rel="stylesheet" href="~/CinensSinemalari/assets/fontawesome-free-5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="~/CinensSinemalari/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/CinensSinemalari/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/CinensSinemalari/assets/css/main.css">
+    <link rel="stylesheet" href="~/CinensSinemalari/assets/css/footer.css">
+    <link rel="stylesheet" href="~/CinensSinemalari/assets/css/popup.css">
+    <link rel="stylesheet" href="~/CinensSinemalari/assets/css/owl.theme.default.min2.css">
+
+    <title>Cinens</title>
+    <link rel="shortcut icon" href="~/CinensSinemalari/assets/img/titlelogo.png">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="left">
+                <ul>
+                    <li><a href="~/CinensSinemalari/index.html">ANA SAYFA</a></li>
+                    <div class="dropdown">
+                        <button type="button" onclick="myFunction()" class="dropbtn">SİNEMALAR<i class="fas fa-sort-down"></i></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI AKHİSAR</a>
+                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI ANTAKYA</a>
+                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI CİTY CENTER</a>
+                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI DERİNCE KİPA</a>
+                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI MANİSA</a>
+                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI MERSİN</a>
+                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI UŞAK FESTİVA</a>
+                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI VENEZİA</a>
+                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI AVM ERDEMLİ</a>
+                            <a href="~/CinensSinemalari/#">İSTANBUL ÜSKÜDAR NEVÇARŞI CİNENS</a>
+                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI ADAPAZARI CADDE 54</a>
+                        </div>
+                    </div>
+                    <li><a href="~/CinensSinemalari/hakkimizda.html">HAKKIMIZDA</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="~/CinensSinemalari/index.html"><img src="~/CinensSinemalari/assets/img/logo.svg" alt=""></a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="~/CinensSinemalari/dolby-atmos.html">DOLBY ATMOS</a></li>
+                    <li><a href="~/CinensSinemalari/kampanyalarimiz.html">KAMPANYALARIMIZ</a></li>
+                    <li><a href="~/CinensSinemalari/iletisim.html">İLETİŞİM</a></li>
+
+                </ul>
+                <div class="bayrak">
+                    <a href="~/CinensSinemalari/#" title="Click for English">
+                        <img src="~/CinensSinemalari/assets/img/trbayrak.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Contact Us  -->
+
+    <div class="contact-us-button">
+        <div class="talking-balloon">
+            <a id="modal-open" href="~/CinensSinemalari/#"><img src="~/CinensSinemalari/assets/img/talking-balloon.png" alt="">
+                <p>Bize</p>
+                <p>Yazın</p>
+            </a>
+        </div>
+        <div class="modal">
+            <form>
+                <h3 id="modal-close">x</h3>
+                <h1>İletişim</h1>
+                <div class="contact-form">
+                    <div class="inputs">
+                        <div class="adsoyad">
+                            <input type="text" placeholder="Ad Soyad">
+                        </div>
+                        <div class="eposta">
+                            <input type="text" placeholder="E Posta Adresi">
+                        </div>
+                        <div class="telefon">
+                            <input type="text" placeholder="Telefon Numaranız">
+                        </div>
+                        <div class="konu">
+                            <input type="text" placeholder="Konu">
+                        </div>
+                    </div>
+                    <div class="text-area">
+                        <textarea name="input" id="" cols="36" rows="3" placeholder="Mesajınız"></textarea>
+                    </div>
+
+                </div>
+                <button id="form-buton">Gönder</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+
+    <!-- Up Button -->
+    <div class="up-buton">
+        <img href="~/CinensSinemalari/#top" id="yukari-cik" src="~/CinensSinemalari/assets/img/top-scroll.png" alt="">
+    </div>
+    <!-- Up Button -->
+
+    @RenderBody();
+
+
+    <footer>
+        <div class="footer-area">
+            <div class="contact-us">
+                <input class="email" type="email" class="email" placeholder="E Posta Adresi">
+                <button class="gonder" type="button" class="gonderbtn">Gönder</button>
+            </div>
+            <div class="text">
+                <p class="metin">Yeniliklerden hemen haberdar olmak ve efsaneleri yakından takip etmek</p>
+                <p class="metin2">için lütfen e-posta adresini kayıt ediniz.</p>
+            </div>
+            <div class="follow-us">
+                <span>Bizi Takip Edin</span>
+            </div>
+            <ul class="icons">
+                <li><a href="~/CinensSinemalari/https://www.facebook.com/CinensSinema/"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="~/CinensSinemalari/https://twitter.com/cinenssinema"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="~/CinensSinemalari/https://www.instagram.com/cinenssinemalari/?hl=tr"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="~/CinensSinemalari/https://www.youtube.com/channel/UCAxrFExJQBNA-3OZaY_vLgw/featured"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="~/CinensSinemalari/#">SİNEMALAR</a></li>
+                <li><a href="~/CinensSinemalari/#">HAKKIMIZDA</a></li>
+                <li><a href="~/CinensSinemalari/#">DOLBY ATMOS</a></li>
+                <li><a href="~/CinensSinemalari/#">KAMPANYALARIMIZ</a></li>
+                <li><a href="~/CinensSinemalari/#">İLETİŞİM</a></li>
+                <li><a href="~/CinensSinemalari/#">KARİYER</a></li>
+            </ul>
+            <ul class="kvkk">
+                <li><a href="~/CinensSinemalari/#">KVKK Aydınlatma Bildirimi</a></li>
+                <li><a href="~/CinensSinemalari/#">KVKK Başvuru Formu</a></li>
+                <li><a href="~/CinensSinemalari/#">Gizlilik</a></li>
+            </ul>
+
+        </div>
+        <div class="copyright">
+            <span>© Copyright 2017 <b style="color: #EDDA3B;">Cinens</b> Sinemaları</span>
+        </div>
+        <div class="text-center">
+            <li><img src="~/CinensSinemalari/assets/img/footer/footer-badges.png" alt=""></li>
+        </div>
+        <div class="ticket">
+            <li><img src="~/CinensSinemalari/assets/img/footer/biletinial.png" alt=""></li>
+        </div>
+    </footer>
+
+    <script src="~/CinensSinemalari/assets/js/jquery-3.6.0.min.js "></script>
+    <script src="~/CinensSinemalari/assets/js/owl.carousel.min.js "></script>
+    <script src="~/CinensSinemalari/assets/js/owl.js "></script>
+    <script src="~/CinensSinemalari/assets/js/tabs.js"></script>
+    <script src="~/CinensSinemalari/assets/js/app.js"></script>
+
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>

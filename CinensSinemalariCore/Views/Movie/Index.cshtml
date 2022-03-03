@@ -1,132 +1,13 @@
 ﻿
 @{
-    Layout = null;
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
 }
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/fontawesome-free-5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/popup.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min2.css">
-
-    <title>Cinens</title>
-    <link rel="shortcut icon" href="assets/img/titlelogo.png">
-
-</head>
-
-<body>
-    <!-- Header -->
-    <header>
-        <div class="navbar">
-            <div class="left">
-                <ul>
-                    <li><a href="index.html">ANA SAYFA</a></li>
-                    <div class="dropdown">
-                        <button type="button" onclick="myFunction()" class="dropbtn">SİNEMALAR<i class="fas fa-sort-down"></i></button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#">CİNENS SİNEMALARI AKHİSAR</a>
-                            <a href="#">CİNENS SİNEMALARI ANTAKYA</a>
-                            <a href="#">CİNENS SİNEMALARI CİTY CENTER</a>
-                            <a href="#">CİNENS SİNEMALARI DERİNCE KİPA</a>
-                            <a href="#">CİNENS SİNEMALARI MANİSA</a>
-                            <a href="#">CİNENS SİNEMALARI MERSİN</a>
-                            <a href="#">CİNENS SİNEMALARI UŞAK FESTİVA</a>
-                            <a href="#">CİNENS SİNEMALARI VENEZİA</a>
-                            <a href="#">CİNENS SİNEMALARI AVM ERDEMLİ</a>
-                            <a href="#">İSTANBUL ÜSKÜDAR NEVÇARŞI CİNENS</a>
-                            <a href="#">CİNENS SİNEMALARI ADAPAZARI CADDE 54</a>
-                        </div>
-                    </div>
-                    <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
-                </ul>
-            </div>
-            <div class="logo">
-                <a href="index.html"><img src="assets/img/logo.svg" alt=""></a>
-            </div>
-            <div class="right">
-                <ul>
-                    <li><a href="dolby-atmos.html">DOLBY ATMOS</a></li>
-                    <li><a href="kampanyalarimiz.html">KAMPANYALARIMIZ</a></li>
-                    <li><a href="iletisim.html">İLETİŞİM</a></li>
-
-                </ul>
-                <div class="bayrak">
-                    <a href="#" title="Click for English">
-                        <img src="assets/img/trbayrak.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Header -->
-
-    <!-- Contact Us Buttons -->
-
-    <div class="contact-us-button">
-        <div class="talking-balloon">
-            <a id="modal-open" href="#"><img src="assets/img/talking-balloon.png" alt="">
-                <p>Bize</p>
-                <p>Yazın</p>
-            </a>
-        </div>
-        <div class="modal">
-            <form>
-                <h3 id="modal-close">x</h3>
-                <h1>İletişim</h1>
-                <div class="contact-form">
-                    <div class="inputs">
-                        <div class="adsoyad">
-                            <input type="text" placeholder="Ad Soyad">
-                        </div>
-                        <div class="eposta">
-                            <input type="text" placeholder="E Posta Adresi">
-                        </div>
-                        <div class="telefon">
-                            <input type="text" placeholder="Telefon Numaranız">
-                        </div>
-                        <div class="konu">
-                            <input type="text" placeholder="Konu">
-                        </div>
-                    </div>
-                    <div class="text-area">
-                        <textarea name="input" id="" cols="36" rows="3" placeholder="Mesajınız"></textarea>
-                    </div>
-
-                </div>
-                <button id="form-buton">Gönder</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Contact Us Buttons -->
-
-    <!-- Up Button -->
-    <div class="up-buton">
-        <img href="#top" id="yukari-cik" src="assets/img/top-scroll.png" alt="">
-    </div>
-    <!-- Up Button -->
 
 
     <!-- owl-carousel -->
-    <div class="slider">
-        <div class="owl-carousel owl-theme">
-            <div class="item"> <img src="assets/img/banner/eternas.jpg" alt=""> </div>
-            <div class="item"> <img src="assets/img/banner/Enkanto.jpg" alt=""> </div>
-            <div class="item"> <img src="assets/img/banner/aykut2.jpg" alt=""> </div>
-            <div class="item"> <img src="assets/img/banner/umcuk.jpg" alt=""> </div>
-            <div class="item"> <img src="assets/img/banner/matrix.jpg" alt=""> </div>
-        </div>
-    </div>
+    
+    @await Html.PartialAsync("~/Views/Movie/OwlCarouselPartial.cshtml");
 
     <!-- owl-carousel -->
 
@@ -183,12 +64,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">The Matrix Resurrections</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/matrix.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/matrix.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Aksiyon</div>
@@ -203,12 +84,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Örümcek-Adam: Eve Dönüş Yok</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/spider-man.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/spider-man.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Aksiyon</div>
@@ -225,12 +106,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Dayı: Bir Adamın Hikayesi</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/dayi.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/dayi.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Dram</div>
@@ -246,12 +127,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Clifford Büyük Kırmızı Köpek</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/clifford.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/clifford.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Animasyon</div>
@@ -267,12 +148,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Aykut Enişte 2</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/aykut-eniste-2.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/aykut-eniste-2.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Komedi</div>
@@ -286,12 +167,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Lain</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/lain.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/lain.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Korku</div>
@@ -305,12 +186,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Bayram Şekeri</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/bayram-şekeri.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/bayram-şekeri.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Dram</div>
@@ -324,12 +205,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Evdekiler</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/evdekiler.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/evdekiler.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Gerilim</div>
@@ -343,12 +224,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">İntikam Vakti</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/intikam-vakti.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/intikam-vakti.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Aksiyon</div>
@@ -365,12 +246,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Resident Evil</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/resident-evil.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/resident-evil.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Aksiyon</div>
@@ -385,12 +266,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Venom: Zehirli Öfke 2</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/venom-zehirli-ofke.png" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/venom-zehirli-ofke.png" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Aksiyon</div>
@@ -409,12 +290,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Eternals</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/eternals.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/eternals.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Aksiyon</div>
@@ -430,12 +311,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Titane</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/titane.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/titane.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Dram</div>
@@ -451,12 +332,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Kuklalı Köşk 2: Orman Kaşifi</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/kuklalı-kosk.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/kuklalı-kosk.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Komedi</div>
@@ -471,12 +352,12 @@
                     <div class="card">
                         <a href="movies.html">
                             <div class="card-header">Enkanto: Sihirli Dünya</div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/enkanto-sihirli-dunya.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/enkanto-sihirli-dunya.jpg" alt=""></div>
                             <div class="genel-izleyici">
-                                <img src="assets/img/genelizleyici/10.png" alt="">
-                                <img src="assets/img/genelizleyici/13a.png" alt="">
-                                <img src="assets/img/genelizleyici/olumsuzornek.png" alt="">
-                                <img src="assets/img/genelizleyici/siddet.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
                             </div>
                             <div class="card-footer">
                                 <div class="category">Animasyon</div>
@@ -497,7 +378,7 @@
                                 <p>Kahraman</p>
                                 <p>07 Ocak</p>
                             </div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/kahraman.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/kahraman.jpg" alt=""></div>
                         </a>
                     </div>
                     <div class="card" id="card1">
@@ -506,7 +387,7 @@
                                 <p>Canım Dayım</p>
                                 <p>07 Ocak</p>
                             </div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/canimdayim.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/canimdayim.jpg" alt=""></div>
                         </a>
                     </div>
                     <div class="card" id="card1">
@@ -515,7 +396,7 @@
                                 <p>Aslan Hürkuş Kayıp Elmas</p>
                                 <p>07 Ocak</p>
                             </div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/aslanhurkuskayipelmas.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/aslanhurkuskayipelmas.jpg" alt=""></div>
                             </a>
                     </div>
                     <div class="card" id="card1">
@@ -524,7 +405,7 @@
                                 <p>Siyah Telefon</p>
                                 <p>04 Şubat</p>
                             </div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/siyahtelefon.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/siyahtelefon.jpg" alt=""></div>
                         </a>
                     </div>
                     <div class="card" id="card1">
@@ -533,7 +414,7 @@
                                 <p>Siyah Telefon</p>
                                 <p>04 Şubat</p>
                             </div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/siyahtelefon.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/siyahtelefon.jpg" alt=""></div>
                         </a>
                     </div>
                     <div class="card" id="card1">
@@ -542,7 +423,7 @@
                                 <p>Siyah Telefon</p>
                                 <p>04 Şubat</p>
                             </div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/siyahtelefon.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/siyahtelefon.jpg" alt=""></div>
                         </a>
                     </div>
                     <div class="card" id="card1">
@@ -551,7 +432,7 @@
                                 <p>Siyah Telefon</p>
                                 <p>04 Şubat</p>
                             </div>
-                            <div class="card-main"><img class="image" src="assets/img/filmler/siyahtelefon.jpg" alt=""></div>
+                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/siyahtelefon.jpg" alt=""></div>
                         </a>
                     </div>
                 </div>
@@ -569,9 +450,9 @@
         </div>
         <div class="box2">
             <div class="owl-carousel main-slider2">
-                <div class="banner-img"> <img src="assets/img/banner/acildik-haydisinemaya.jpg" alt=""> </div>
-                <div class="banner-img"> <img src="assets/img/banner/acildik-haydisinemaya.jpg" alt=""> </div>
-                <div class="banner-img"> <img src="assets/img/banner/acildik-haydisinemaya.jpg" alt=""> </div>
+                <div class="banner-img"> <img src="~/CinensSinemalari/assets/img/banner/acildik-haydisinemaya.jpg" alt=""> </div>
+                <div class="banner-img"> <img src="~/CinensSinemalari/assets/img/banner/acildik-haydisinemaya.jpg" alt=""> </div>
+                <div class="banner-img"> <img src="~/CinensSinemalari/assets/img/banner/acildik-haydisinemaya.jpg" alt=""> </div>
             </div>
         </div>
         <div class="tumkampanyalar">
@@ -580,7 +461,7 @@
         <div class="instagram">
             <div class="textbtn">
                 <a href="">
-                    <img src="assets/img/instagramlogo.png" alt="">
+                    <img src="~/CinensSinemalari/assets/img/instagramlogo.png" alt="">
                     <h1>cinenssinemalari</h1>
                 </a>
             </div>
@@ -593,61 +474,3 @@
 
     <!-- Our Campaigns -->
 
-
-    <footer>
-        <div class="footer-area">
-            <div class="contact-us">
-                <input class="email" type="email" class="email" placeholder="E Posta Adresi">
-                <button class="gonder" type="button" class="gonderbtn">Gönder</button>
-            </div>
-            <div class="text">
-                <p class="metin">Yeniliklerden hemen haberdar olmak ve efsaneleri yakından takip etmek</p>
-                <p class="metin2">için lütfen e-posta adresini kayıt ediniz.</p>
-            </div>
-            <div class="follow-us">
-                <span>Bizi Takip Edin</span>
-            </div>
-            <ul class="icons">
-                <li><a href="https://www.facebook.com/CinensSinema/"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/cinenssinema"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/cinenssinemalari/?hl=tr"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCAxrFExJQBNA-3OZaY_vLgw/featured"><i class="fab fa-youtube"></i></a></li>
-            </ul>
-            <ul class="menu">
-                <li><a href="#">SİNEMALAR</a></li>
-                <li><a href="#">HAKKIMIZDA</a></li>
-                <li><a href="#">DOLBY ATMOS</a></li>
-                <li><a href="#">KAMPANYALARIMIZ</a></li>
-                <li><a href="#">İLETİŞİM</a></li>
-                <li><a href="#">KARİYER</a></li>
-            </ul>
-            <ul class="kvkk">
-                <li><a href="#">KVKK Aydınlatma Bildirimi</a></li>
-                <li><a href="#">KVKK Başvuru Formu</a></li>
-                <li><a href="#">Gizlilik</a></li>
-            </ul>
-
-        </div>
-        <div class="copyright">
-            <span>© Copyright 2017 <b style="color: #EDDA3B;">Cinens</b> Sinemaları</span>
-        </div>
-        <div class="text-center">
-            <li><img src="assets/img/footer/footer-badges.png" alt=""></li>
-        </div>
-        <div class="ticket">
-            <li><img src="assets/img/footer/biletinial.png" alt=""></li>
-        </div>
-    </footer>
-
-    <script src="assets/js/jquery-3.6.0.min.js "></script>
-    <script src="assets/js/owl.carousel.min.js "></script>
-    <script src="assets/js/owl.js "></script>
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/app.js"></script>
-
-    <script>
-        document.getElementById("defaultOpen").click();
-    </script>
-</body>
-
-</html>
