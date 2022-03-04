@@ -2,15 +2,15 @@
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CinensSinemalariCore.Controllers
+namespace CinensSinemalariCore.ViewComponents.Movie
 {
-    
-    public class MovieController : Controller
+    public class MovieList:ViewComponent
     {
         MovieManager mm = new MovieManager(new EfMovieRepository());
-        public IActionResult Index()
+        public IViewComponentResult Invoke()
         {
-            return View();
+            var values = mm.GetList();
+            return View(values);
         }
     }
 }

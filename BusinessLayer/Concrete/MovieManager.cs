@@ -18,7 +18,12 @@ namespace BusinessLayer.Concrete
             _movieDal = movieDal;
         }
 
-        public List<Movie> GetList()
+		public List<Movie> GetHorizontalMovie()
+		{
+            return _movieDal.GetListAll().Take(5).ToList();
+		}
+
+		public List<Movie> GetList()
         {
             return _movieDal.GetListAll();
         }

@@ -1,0 +1,31 @@
+﻿@using EntityLayer.Concrete
+@model List<Movie>
+
+
+
+	<div id="vizyondakiler" class="tabcontent">
+        @foreach (var item in Model)
+        {
+            
+       
+                    <div class="card">
+                        <a href="movies.html">
+                            <div class="card-header">@item.MovieName</div>
+                            <div class="card-main"><img class="image" src="@item.MovieImageUrl" alt=""></div>
+                            <div class="genel-izleyici">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/10.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/13a.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/olumsuzornek.png" alt="">
+                                <img src="~/CinensSinemalari/assets/img/genelizleyici/siddet.png" alt="">
+                            </div>
+                            <div class="card-footer">
+                                <div class="category">Aksiyon</div>
+                                <div class="category">Bilim Kurgu</div>
+                            </div>
+                            <div class="card-footer2">
+                                <div class="sessions"> SEANSLAR</div>
+                            </div>
+                        </a>
+                    </div>
+                     }
+                </div>
