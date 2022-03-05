@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="~/CinensSinemalari/assets/css/footer.css">
     <link rel="stylesheet" href="~/CinensSinemalari/assets/css/popup.css">
     <link rel="stylesheet" href="~/CinensSinemalari/assets/css/owl.theme.default.min2.css">
+    
 
     <title>Cinens</title>
     <link rel="shortcut icon" href="~/CinensSinemalari/assets/img/titlelogo.png">
@@ -47,7 +48,7 @@
                 <ul>
                     <li><a href="~/CinensSinemalari/dolby-atmos.html">DOLBY ATMOS</a></li>
                     <li><a href="~/CinensSinemalari/kampanyalarimiz.html">KAMPANYALARIMIZ</a></li>
-                    <li><a href="~/CinensSinemalari/iletisim.html">İLETİŞİM</a></li>
+                    <li><a href="~/Views/ContactInformation/Index.cshtml">İLETİŞİM</a></li>
 
                 </ul>
                 <div class="bayrak">
@@ -64,12 +65,12 @@
 
     <div class="contact-us-button">
         <div class="talking-balloon">
-            <a id="modal-open" href="#test"><img src="~/CinensSinemalari/assets/img/talking-balloon.png" alt="">
+            <a id="modal-open" href="#openbutton"><img src="~/CinensSinemalari/assets/img/talking-balloon.png" alt="">
                 <p>Bize</p>
                 <p>Yazın</p>
             </a>
         </div>
-        <div class="modal" id="test">
+        <div class="modal" id="openbutton">
             
             @await Html.PartialAsync("~/Views/Contact/ContactPopUp.cshtml");
 
@@ -101,14 +102,14 @@
                 <span>Bizi Takip Edin</span>
             </div>
             <ul class="icons">
-                <li><a href="~/CinensSinemalari/https://www.facebook.com/CinensSinema/"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="~/CinensSinemalari/https://twitter.com/cinenssinema"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="~/CinensSinemalari/https://www.instagram.com/cinenssinemalari/?hl=tr"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="~/CinensSinemalari/https://www.youtube.com/channel/UCAxrFExJQBNA-3OZaY_vLgw/featured"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.facebook.com/CinensSinema/"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/cinenssinema"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/cinenssinemalari/?hl=tr"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCAxrFExJQBNA-3OZaY_vLgw/featured"><i class="fab fa-youtube"></i></a></li>
             </ul>
             <ul class="menu">
-                <li><a href="~/CinensSinemalari/#">SİNEMALAR</a></li>
-                <li><a href="~/CinensSinemalari/#">HAKKIMIZDA</a></li>
+                <li><a href="#">SİNEMALAR</a></li>
+                <li><a href="#">HAKKIMIZDA</a></li>
                 <li><a href="~/CinensSinemalari/#">DOLBY ATMOS</a></li>
                 <li><a href="~/CinensSinemalari/#">KAMPANYALARIMIZ</a></li>
                 <li><a href="~/CinensSinemalari/#">İLETİŞİM</a></li>

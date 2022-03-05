@@ -11,7 +11,8 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int AboutID { get; set; }
-        public string AboutDetails1 { get; set; }
+		public string AboutTitle { get; set; }
+		public string AboutDetails1 { get; set; }
         public string AboutDetails2 { get; set; }
         public string AboutStatus { get; set; }
     }
