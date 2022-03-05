@@ -34,17 +34,7 @@
                     <div class="dropdown">
                         <button type="button" onclick="myFunction()" class="dropbtn">SİNEMALAR<i class="fas fa-sort-down"></i></button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI AKHİSAR</a>
-                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI ANTAKYA</a>
-                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI CİTY CENTER</a>
-                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI DERİNCE KİPA</a>
-                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI MANİSA</a>
-                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI MERSİN</a>
-                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI UŞAK FESTİVA</a>
-                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI VENEZİA</a>
-                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI AVM ERDEMLİ</a>
-                            <a href="~/CinensSinemalari/#">İSTANBUL ÜSKÜDAR NEVÇARŞI CİNENS</a>
-                            <a href="~/CinensSinemalari/#">CİNENS SİNEMALARI ADAPAZARI CADDE 54</a>
+                            @await Component.InvokeAsync("BranchList");
                         </div>
                     </div>
                     <li><a href="~/CinensSinemalari/hakkimizda.html">HAKKIMIZDA</a></li>
@@ -70,45 +60,23 @@
     </header>
     <!-- Header -->
 
-    <!-- Contact Us  -->
+    <!-- Contact Us Pop Up  -->
 
     <div class="contact-us-button">
         <div class="talking-balloon">
-            <a id="modal-open" href="~/CinensSinemalari/#"><img src="~/CinensSinemalari/assets/img/talking-balloon.png" alt="">
+            <a id="modal-open" href="#test"><img src="~/CinensSinemalari/assets/img/talking-balloon.png" alt="">
                 <p>Bize</p>
                 <p>Yazın</p>
             </a>
         </div>
-        <div class="modal">
-            <form>
-                <h3 id="modal-close">x</h3>
-                <h1>İletişim</h1>
-                <div class="contact-form">
-                    <div class="inputs">
-                        <div class="adsoyad">
-                            <input type="text" placeholder="Ad Soyad">
-                        </div>
-                        <div class="eposta">
-                            <input type="text" placeholder="E Posta Adresi">
-                        </div>
-                        <div class="telefon">
-                            <input type="text" placeholder="Telefon Numaranız">
-                        </div>
-                        <div class="konu">
-                            <input type="text" placeholder="Konu">
-                        </div>
-                    </div>
-                    <div class="text-area">
-                        <textarea name="input" id="" cols="36" rows="3" placeholder="Mesajınız"></textarea>
-                    </div>
+        <div class="modal" id="test">
+            
+            @await Html.PartialAsync("~/Views/Contact/ContactPopUp.cshtml");
 
-                </div>
-                <button id="form-buton">Gönder</button>
-            </form>
         </div>
     </div>
 
-    <!-- Contact Us -->
+    <!-- Contact Us Pop Up -->
 
     <!-- Up Button -->
     <div class="up-buton">
@@ -121,13 +89,13 @@
 
     <footer>
         <div class="footer-area">
-            <div class="contact-us">
-                <input class="email" type="email" class="email" placeholder="E Posta Adresi">
-                <button class="gonder" type="button" class="gonderbtn">Gönder</button>
-            </div>
+
+            @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml");
+
+
             <div class="text">
-                <p class="metin">Yeniliklerden hemen haberdar olmak ve efsaneleri yakından takip etmek</p>
-                <p class="metin2">için lütfen e-posta adresini kayıt ediniz.</p>
+	            <p class="metin">Yeniliklerden hemen haberdar olmak ve efsaneleri yakından takip etmek</p>
+	            <p class="metin2">için lütfen e-posta adresini kayıt ediniz.</p>
             </div>
             <div class="follow-us">
                 <span>Bizi Takip Edin</span>

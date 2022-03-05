@@ -8,7 +8,7 @@
     <!-- owl-carousel -->
 
     
-    @await Component.InvokeAsync("MovieOwlCarousel");
+    @await Component.InvokeAsync("MovieOwlCarousel")
 
     <!-- owl-carousel -->
 
@@ -27,17 +27,7 @@
                         <button class="dropbtn1">Şubelerimiz</button><i class="fas fa-sort-down"></i>
                     </div>
                     <div class="dropdown-content1">
-                        <a href="#">Cinens Sinemaları Akhisar</a>
-                        <a href="#">Cinens Sinemaları Antakya</a>
-                        <a href="#">Cinens Sinemaları City Center</a>
-                        <a href="#">Cinens Sinemaları Derince Kipa</a>
-                        <a href="#">Cinens Sinemaları Manisa</a>
-                        <a href="#">Cinens Sinemaları Mersin</a>
-                        <a href="#">Cinens Sinemaları Uşak Festiva</a>
-                        <a href="#">Cinens Sinemaları Venezia</a>
-                        <a href="#">Cinens Sinemaları AVM Erdemli</a>
-                        <a href="#">İstanbul Üsküdar Nevçarşı Cinens</a>
-                        <a href="#">Cinens Sinemaları Adapazarı Cadde 54</a>
+                        @await Component.InvokeAsync("BranchList");
                     </div>
                 </div>
 
@@ -62,73 +52,9 @@
             <!-- Tab content -->
             <div class="bolumler">
                 
-                @await Component.InvokeAsync("MovieList");
+                @await Component.InvokeAsync("MovieList")
 
-                <div id="gelecekprogram" class="tabcontent">
-                    <div class="card" id="card1">
-                        <a href="movies.html">
-                            <div class="card-header">
-                                <p>Kahraman</p>
-                                <p>07 Ocak</p>
-                            </div>
-                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/kahraman.jpg" alt=""></div>
-                        </a>
-                    </div>
-                    <div class="card" id="card1">
-                        <a href="movies.html">
-                            <div class="card-header">
-                                <p>Canım Dayım</p>
-                                <p>07 Ocak</p>
-                            </div>
-                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/canimdayim.jpg" alt=""></div>
-                        </a>
-                    </div>
-                    <div class="card" id="card1">
-                        <a href="movies.html">
-                            <div class="card-header">
-                                <p>Aslan Hürkuş Kayıp Elmas</p>
-                                <p>07 Ocak</p>
-                            </div>
-                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/aslanhurkuskayipelmas.jpg" alt=""></div>
-                            </a>
-                    </div>
-                    <div class="card" id="card1">
-                        <a href="movies.html">
-                            <div class="card-header">
-                                <p>Siyah Telefon</p>
-                                <p>04 Şubat</p>
-                            </div>
-                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/siyahtelefon.jpg" alt=""></div>
-                        </a>
-                    </div>
-                    <div class="card" id="card1">
-                        <a href="movies.html">
-                            <div class="card-header">
-                                <p>Siyah Telefon</p>
-                                <p>04 Şubat</p>
-                            </div>
-                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/siyahtelefon.jpg" alt=""></div>
-                        </a>
-                    </div>
-                    <div class="card" id="card1">
-                        <a href="movies.html">
-                            <div class="card-header">
-                                <p>Siyah Telefon</p>
-                                <p>04 Şubat</p>
-                            </div>
-                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/siyahtelefon.jpg" alt=""></div>
-                        </a>
-                    </div>
-                    <div class="card" id="card1">
-                        <a href="movies.html">
-                            <div class="card-header">
-                                <p>Siyah Telefon</p>
-                                <p>04 Şubat</p>
-                            </div>
-                            <div class="card-main"><img class="image" src="~/CinensSinemalari/assets/img/filmler/siyahtelefon.jpg" alt=""></div>
-                        </a>
-                    </div>
-                </div>
+               @await Component.InvokeAsync("UpComingMovie")
             </div>
         </div>
     </div>
@@ -153,7 +79,7 @@
         </div>
         <div class="instagram">
             <div class="textbtn">
-                <a href="">
+                <a href="https://www.instagram.com/cinenssinemalari/" target="_blank">
                     <img src="~/CinensSinemalari/assets/img/instagramlogo.png" alt="">
                     <h1>cinenssinemalari</h1>
                 </a>

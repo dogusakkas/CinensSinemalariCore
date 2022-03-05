@@ -16,6 +16,7 @@ namespace EntityLayer.Concrete
         public sbyte ContactPhoneNumber { get; set; }
         public string ContactSubject { get; set; }
         public string ContactContents { get; set; }
-        public bool ContactStatus { get; set; }
+		public DateTime ContactDate { get; set; }
+		public bool ContactStatus { get; set; }
     }
 }

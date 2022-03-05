@@ -1,0 +1,30 @@
+﻿<div class="contact-us">
+	<form>
+		<input class="email" id="txtemail" type="email" name="Mail" class="email" placeholder="E Posta Adresi">
+		<button class="gonder" id="btnsend" type="value" class="gonderbtn">Gönder</button>
+	</form>
+</div>
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script type="text/javascript">
+
+	$(function (){
+		$("#btnsend").click(function() {
+			var veri = { Mail: $("#txtemail").val()};
+
+			$.ajax({
+				type: 'post',
+				url: '/NewsLetter/SubscribeMail/',
+				datatype: 'json',
+				data:veri,
+				success: function (data) {
+					alert("Mail Üyeliğiniz Alınmıştır")
+				}
+			});
+		});
+	});
+
+</script>

@@ -1,0 +1,12 @@
+﻿@using EntityLayer.Concrete
+@model List<Branch>
+
+@foreach (var item in Model)
+{
+	if (item.BranchStatus == true)
+	{
+
+
+		<a href="#">@item.BranchName</a>
+	}
+}

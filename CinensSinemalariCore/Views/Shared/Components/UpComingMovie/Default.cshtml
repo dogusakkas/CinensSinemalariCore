@@ -1,0 +1,21 @@
+﻿@using EntityLayer.Concrete
+@model List<Movie>
+
+<div id="gelecekprogram" class="tabcontent">
+	@foreach (var item in Model)
+	{
+
+		if (item.MovieStatus==2)
+		{
+			<div class="card" id="card1">
+				<a href="movies.html">
+					<div class="card-header">
+						<p>@item.MovieName</p>
+						<p>@(((DateTime)item.MovieDate).ToString("dd MMMM"))</p>
+					</div>
+					<div class="card-main"><img class="image" src="@item.MovieImageUrl" alt=""></div>
+				</a>
+				</div>
+		}
+	}
+	</div>

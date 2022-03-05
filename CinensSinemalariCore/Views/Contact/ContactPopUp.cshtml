@@ -1,0 +1,51 @@
+﻿<form>
+    <h3 id="modal-close">x</h3>
+    <h1>İletişim</h1>
+    <div class="contact-form">
+        <div class="inputs">
+            <div class="adsoyad">
+                <input type="text" id="namesurname" name="ContactNameSurname" placeholder="Ad Soyad" autocomplete="off">
+            </div>
+            <div class="eposta">
+                <input type="email" id="mail" name="ContactMail" placeholder="E Posta Adresi" autocomplete="off">
+            </div>
+            <div class="telefon">
+                <input type="text" id="phonenumber" name="ContactPhoneNumber" placeholder="Telefon Numaranız" autocomplete="off">
+            </div>
+            <div class="konu">
+                <input type="text" id="subject" name="ContactSubject" placeholder="Konu" autocomplete="off">
+            </div>
+        </div>
+        <div class="text-area">
+            <textarea name="input" id="" cols="36" rows="3" placeholder="Mesajınız"></textarea>
+        </div>
+    </div>
+    <button type="submit" id="form-buton">Gönder</button>
+</form>
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script type="text/javascript">
+
+	$(function() {
+		$("#form-buton").click(function () {
+			var name = { ContactNameSurname: $("#namesurname").val()};
+			var mail = { ContactMail: $("#mail").val() };
+			var phone = { ContactPhoneNumber: $("#phonenumber").val() };
+			var subject = { ContactSubject: $("#subject").val() };
+
+			$.ajax({
+				type:'post',
+				url:'/Contact/ContactPopUp/',
+				datatype:'json',
+				data: name,mail,phone,subject,
+                success: function (data) {
+                    alert("test");
+                }
+			});
+		});
+	});
+
+</script>
+

@@ -14,6 +14,7 @@ namespace EntityLayer.Concrete
         public string MovieName { get; set; }
         public string MovieImageUrl { get; set; }
         public string MovieHorizontalImageUrl { get; set; }
+        public DateTime MovieDate { get; set; }
         public string MovieCast { get; set; }
         public string MovieDirector { get; set; }
         public string YoutubeEmbed { get; set; }
