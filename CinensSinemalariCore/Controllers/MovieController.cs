@@ -12,5 +12,10 @@ namespace CinensSinemalariCore.Controllers
         {
             return View();
         }
+
+        public IActionResult MovieDetails()
+        {
+            return View();
+        }
     }
 }

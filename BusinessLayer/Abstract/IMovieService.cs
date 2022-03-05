@@ -10,5 +10,6 @@ namespace BusinessLayer.Abstract
     public interface IMovieService:IGenericService<Movie>
     {
         List<Movie> GetHorizontalMovie();
+        List<Movie> GetMovieByID(int id);
     }
 }

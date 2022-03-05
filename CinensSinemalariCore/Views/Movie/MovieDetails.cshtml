@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewData["Title"] = "MovieDetails";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+
+
+<head>
+    <link rel="stylesheet" href="~/CinensSinemalari/assets/css/movies.css">
+</head>
+
+    <!-- Movies -->
+    <div class="movies">
+
+@await Component.InvokeAsync("MovieInformation")
+
+        <div class="filterdropdown">
+            <div class="dropdown2">
+                <button onclick="myFunction2()" class="dropbtn2">Şube Seçimi<i class="fa-solid fa-angle-down"></i></button>
+                <div id="moviesDropdown" class="dropdown-content2">
+                    <a href="#">Cinens Sinemaları Akhisar</a>
+                    <a href="#">Cinens Sinemaları Antakya</a>
+                    <a href="#">Cinens Sinemaları City Center</a>
+                    <a href="#">Cinens Sinemaları Derince Kipa</a>
+                    <a href="#">Cinens Sinemaları Manisa</a>
+                    <a href="#">Cinens Sinemaları Mersin</a>
+                    <a href="#">Cinens Sinemaları Uşak Festiva</a>
+                    <a href="#">Cinens Sinemaları Venezia</a>
+                    <a href="#">Cinens Sinemaları AVM Erdemli</a>
+                    <a href="#">İstanbul Üsküdar Nevçarşı Cinens</a>
+                    <a href="#">Cinens Sinemaları Adapazarı Cadde 54</a>
+                </div>
+            </div>
+            <a href="#" class="filterbtn">
+                <div href="#" class="btn">Filtrele</div>
+            </a>
+        </div>
+    </div>
+    <!-- Movies -->
+
+    <!-- Sessions -->
+
+    <div class="sessions">
+        <div class="sections">
+            <div class="title">
+                <h1>Seanslar</h1>
+            </div>
+            <div class="dates">
+                <div class="tab">
+                    <button class="tablinks" id="defaultOpen" onclick="sessions(event, 'Cuma')"><p>04 Mart Cum</p> </button>
+                    <button class="tablinks" onclick="sessions(event, 'Cumartesi')"><p>05 Mart Cmt</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Pazar')"><p>06 Mart Paz</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Pazartesi')"><p>07 Mart Pzt</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Salı')"><p>08 Mart Sal</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Çarşamba')"><p>09 Mart Çar</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Perşembe')"><p>10 Mart Per</p></button>
+                </div>
+
+                <div id="Cuma" class="tabcontent">
+                    <div class="mersin">
+                        <div class="title">
+                            Cinens Sinemaları Mersin
+                        </div>
+                        <div class="salons">
+                            <p>Salon 4</p>
+                            <p>Salon 6</p>
+                        </div>
+                        <div class="turkce">
+                            <div class="turkcedublaj">
+                                <p>Türkçe Dublaj</p>
+                                <div class="buttons">
+                                    <button class="1">11:00</button>
+                                    <button class="2">16:45</button>
+                                    <button class="3">18:10</button>
+                                </div>
+                            </div>
+                            <div class="turkcealtyazili">
+                                <p>Türkçe Altyazılı</p>
+                                <button class="1">11:00</button>
+                                <button class="2">16:45</button>
+                                <button class="3">18:10</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="venezia">Cinens Sinemaları Venezia</div>
+                    <div class="adapazaricadde54">Cinens Sinemaları Adapazarı Cadde 54</div>
+                    <div class="akhisar">Cinens Sinemaları Akhisar</div>
+                    <div class="antakya">Cinens Sinemaları Antakya</div>
+                    <div class="uskudarnevcarsi">Cinens Sinemaları Üsküdar NevÇarşı</div>
+                    <div class="mersinerdemli">Cinens Sinemaları Mersin Erdemli Şubesi</div>
+                    <div class="citycenter">Cinens Sinemaları City Center</div>
+                    <div class="manisa">Cinens Sinemaları Manisa</div>
+                    <div class="usakfestiva">Cinens Sinemaları Uşak Festiva</div>
+                </div>
+
+                <div id="Cumartesi" class="tabcontent">
+                </div>
+                <div id="Pazar" class="tabcontent">
+                </div>
+                <div id="Pazartesi" class="tabcontent">
+                </div>
+                <div id="Salı" class="tabcontent">
+                </div>
+                <div id="Çarşamba" class="tabcontent">
+                </div>
+                <div id="Perşembe" class="tabcontent">
+                </div>
+            </div>
+            <div class="test"></div>
+        </div>
+    </div>
+
+    <!-- Sessions -->
+
+
+
+
+
+    <script src="~/CinensSinemalari/assets/js/movies.js"></script>
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
+
+
