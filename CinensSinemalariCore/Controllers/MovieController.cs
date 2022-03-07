@@ -13,9 +13,10 @@ namespace CinensSinemalariCore.Controllers
             return View();
         }
 
-        public IActionResult MovieDetails()
+        public IActionResult MovieDetails(int id)
         {
-            return View();
+            var values = mm.GetMovieByID(id);
+            return View(values);
         }
     }
 }
