@@ -13,5 +13,6 @@ namespace EntityLayer.Concrete
         public int BranchID { get; set; }
         public string BranchName { get; set; }
         public bool BranchStatus { get; set; }
+
     }
 }

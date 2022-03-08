@@ -41,77 +41,18 @@
             <div class="dates">
                 <div class="tab">
                     <button class="tablinks" id="defaultOpen" onclick="sessions(event, 'Cuma')"><p>@DateTime.Now.ToString("dd MMMM ddd ")</p></button>
-                    <button class="tablinks" onclick="sessions(event, 'Cumartesi')"><p>@DateTime.Now.AddDays(2).ToString("dd MMMM ddd ")</p></button>
-                    <button class="tablinks" onclick="sessions(event, 'Pazar')"><p>@DateTime.Now.AddDays(3).ToString("dd MMMM ddd ")</p></button>
-                    <button class="tablinks" onclick="sessions(event, 'Pazartesi')"><p>@DateTime.Now.AddDays(4).ToString("dd MMMM ddd ")</p></button>
-                    <button class="tablinks" onclick="sessions(event, 'Salı')"><p>@DateTime.Now.AddDays(5).ToString("dd MMMM ddd ")</p></button>
-                    <button class="tablinks" onclick="sessions(event, 'Çarşamba')"><p>@DateTime.Now.AddDays(6).ToString("dd MMMM ddd ")</p></button>
-                    <button class="tablinks" onclick="sessions(event, 'Perşembe')"><p>@DateTime.Now.AddDays(7).ToString("dd MMMM ddd ")</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Cumartesi')"><p>@DateTime.Now.AddDays(1).ToString("dd MMMM ddd ")</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Pazar')"><p>@DateTime.Now.AddDays(2).ToString("dd MMMM ddd ")</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Pazartesi')"><p>@DateTime.Now.AddDays(3).ToString("dd MMMM ddd ")</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Salı')"><p>@DateTime.Now.AddDays(4).ToString("dd MMMM ddd ")</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Çarşamba')"><p>@DateTime.Now.AddDays(5).ToString("dd MMMM ddd ")</p></button>
+                    <button class="tablinks" onclick="sessions(event, 'Perşembe')"><p>@DateTime.Now.AddDays(6).ToString("dd MMMM ddd ")</p></button>
                 </div>
 
+                
+
                 <div id="Cuma" class="tabcontent">
-                    <div class="mersin">
-                        <div class="title">
-                            Cinens Sinemaları Mersin
-                        </div>
-                        <div class="salons">
-                            <p>Salon 4</p>
-                            <p>Salon 6</p>
-                        </div>
-                        <div class="turkce">
-                            <div class="turkcedublaj">
-                                <p>Türkçe Dublaj</p>
-                                <div class="buttons">
-                                    <button class="1">11:00</button>
-                                    <button class="2">16:45</button>
-                                    <button class="3">18:10</button>
-                                </div>
-                            </div>
-                            <div class="turkcealtyazili">
-                                <p>Türkçe Altyazılı</p>
-                                <button class="1">11:00</button>
-                                <button class="2">16:45</button>
-                                <button class="3">18:10</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="mersin">
-                        <div class="title">
-                            Cinens Sinemaları Venezia
-                    </div>
-                    <div class="salons">
-                            <p>Salon 4</p>
-                            <p>Salon 6</p>
-                        </div>
-                        <div class="turkce">
-                            <div class="turkcedublaj">
-                                <p>Türkçe Dublaj</p>
-                                <div class="buttons">
-                                    <button class="1">11:00</button>
-                                    <button class="2">16:45</button>
-                                    <button class="3">18:10</button>
-                                </div>
-                            </div>
-                            <div class="turkcealtyazili">
-                                <p>Türkçe Altyazılı</p>
-                                <button class="1">11:00</button>
-                                <button class="2">16:45</button>
-                                <button class="3">18:10</button>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="adapazaricadde54">Cinens Sinemaları Adapazarı Cadde 54</div>
-                    <div class="akhisar">Cinens Sinemaları Akhisar</div>
-                    <div class="antakya">Cinens Sinemaları Antakya</div>
-                    <div class="uskudarnevcarsi">Cinens Sinemaları Üsküdar NevÇarşı</div>
-                    <div class="mersinerdemli">Cinens Sinemaları Mersin Erdemli Şubesi</div>
-                    <div class="citycenter">Cinens Sinemaları City Center</div>
-                    <div class="manisa">Cinens Sinemaları Manisa</div>
-                    <div class="usakfestiva">Cinens Sinemaları Uşak Festiva</div>
+                    @await Component.InvokeAsync("MovieBranches");
                 </div>
 
                 <div id="Cumartesi" class="tabcontent">

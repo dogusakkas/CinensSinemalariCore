@@ -2044,6 +2044,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\ViewComponents\" />
+    <Folder Include="Areas\Admin\Views\Shared\Components\" />
     <Folder Include="wwwroot\CinensSinemalari\.git\objects\info\" />
     <Folder Include="wwwroot\CinensSinemalari\.git\objects\pack\" />
     <Folder Include="wwwroot\CinensSinemalari\.git\refs\tags\" />

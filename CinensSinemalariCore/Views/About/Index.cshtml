@@ -1,4 +1,7 @@
-﻿
+﻿@using EntityLayer.Concrete
+@model List<About>
+
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Layout/UserLayout.cshtml";
@@ -6,58 +9,28 @@
 
 
 
-<head>
-    <link rel="stylesheet" href="~/CinensSinemalari/assets/css/iletisim.css">
-</head>
+    <link rel="stylesheet" href="~/CinensSinemalari/assets/css/hakkimizda.css">
 
+
+
+
+
+    @foreach (var item in Model)
+    {
+        
+   
 
     <main>
-        <div class="iletisim">
-            <div class="maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3117.4318839128605!2d27.397551715610184!3d38.61594447108962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b99cf28ce0fd61%3A0xccdb1da0758ab844!2sCinens%20Sinemalar%C4%B1%20Manisa!5e0!3m2!1str!2str!4v1642519913682!5m2!1str!2str"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="container">
-                <div class="text">
-                    <div class="logo">
-                        <img src="assets/img/titlelogo.png" alt="">
-                    </div>
-                    <div class="address">
-                        <h1>Cinens Sinemalar</h1>
-                        <p>Kemalpaşa, Adnan Menderes Blv., 16400 İnegöl/Bursa</p>
-                        <h1>0224 715 15 20</h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="container2">
-                <div class="contact-us">
-                    <div class="title">
-                        <h1>Bize Yazın</h1>
-                    </div>
-                    <div class="row">
-                        <div class="row-cols-1">
-                            <input type="text" placeholder="Ad Soyad">
-                            <input type="email" placeholder="E Posta Adresi">
-                        </div>
-                        <div class="row-cols-2">
-                            <input type="text" placeholder="Telefon Numaranız">
-                            <input type="text" placeholder="Konu">
-                        </div>
-                        <div class="row-cols-3">
-                            <textarea name="input" rows="7" cols="130" placeholder="Gönder"></textarea>
-                        </div>
-                        <div class="row-cols-4">
-                            <a href="#"><button>Gönder</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="cinens">
+            <img src="assets/img/about.png" alt="">
         </div>
-
+        <div class="about-us">
+            <div class="card">
+                <h1>@item.AboutTitle</h1>
+                <p>@item.AboutDetails1</p>
+                <p>@item.AboutDetails2</p>
+            </div>
+        </div>
     </main>
 
-
+     }

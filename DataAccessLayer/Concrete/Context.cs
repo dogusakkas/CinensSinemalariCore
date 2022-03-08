@@ -23,5 +23,9 @@ namespace DataAccessLayer.Concrete
         public DbSet<MovieTheater> MovieTheaters { get; set; }
         public DbSet<NewsLetter> NewsLetters { get; set; }
         public DbSet<Branch> Branches { get; set; }
+
+
+
+
     }
 }

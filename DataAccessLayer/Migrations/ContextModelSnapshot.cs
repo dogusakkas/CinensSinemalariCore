@@ -114,12 +114,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<bool>("GeneralAudienceStatus")
                         .HasColumnType("bit");
 
-                    b.Property<int>("MovieID")
-                        .HasColumnType("int");
-
                     b.HasKey("GeneralAudienceID");
-
-                    b.HasIndex("MovieID");
 
                     b.ToTable("GeneralAudiences");
                 });
@@ -169,9 +164,6 @@ namespace DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MovieTheaterID"), 1L, 1);
 
-                    b.Property<int>("MovieID")
-                        .HasColumnType("int");
-
                     b.Property<string>("MovieTheaterName")
                         .HasColumnType("nvarchar(max)");
 
@@ -179,8 +171,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("MovieTheaterID");
-
-                    b.HasIndex("MovieID");
 
                     b.ToTable("MovieTheaters");
                 });
@@ -202,35 +192,6 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("MailID");
 
                     b.ToTable("NewsLetters");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.GeneralAudience", b =>
-                {
-                    b.HasOne("EntityLayer.Concrete.Movie", "Movie")
-                        .WithMany("GeneralAudiences")
-                        .HasForeignKey("MovieID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Movie");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.MovieTheater", b =>
-                {
-                    b.HasOne("EntityLayer.Concrete.Movie", "Movie")
-                        .WithMany("MovieTheater")
-                        .HasForeignKey("MovieID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Movie");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.Movie", b =>
-                {
-                    b.Navigation("GeneralAudiences");
-
-                    b.Navigation("MovieTheater");
                 });
 #pragma warning restore 612, 618
         }

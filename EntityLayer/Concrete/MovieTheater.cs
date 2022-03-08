@@ -13,8 +13,6 @@ namespace EntityLayer.Concrete
         public int MovieTheaterID { get; set; }
         public string MovieTheaterName { get; set; }
         public bool MovieTheaterStatus { get; set; }
-        public int MovieID { get; set; }
-        public Movie Movie { get; set; }
 
     }
 }
